@@ -6,13 +6,9 @@ import Masonry from 'react-masonry-css'
 import './masonry.css'
 import { DataContext } from './DataContext'
 //components
-import GalleryItem from './GalleryItem'
 
 function App() {
-//   const scrollToTop = () => {
-//     window.scrollTo(0, 0)
-// }
-const {scrollToTop , lenght} = useContext(DataContext)
+const {scrollToTop } = useContext(DataContext)
 const dataArray =  useLoaderData()
 const breakpoints = {
   default : 3,

@@ -20,7 +20,7 @@ overflow: hidden;
 }
 
 .preview-content-div {
-    outline: 7px solid red;
+    /* outline: 7px solid red; */
     display: flex;
     flex-direction: column;
     /* justify-content: space-between; */
@@ -32,6 +32,10 @@ overflow: hidden;
 }
 
 .preview button {
+    border: 1px solid white !important;
+    cursor: pointer;
+    padding: 13px  ;
+    border-radius: 5px;
     font-size: 1.2rem;
     text-transform: uppercase;
     color: #ffff;
@@ -47,7 +51,7 @@ overflow: hidden;
 
 @media (width >= 575px) {
 .preview-content-div {
-        outline: 7px solid red;
+        /* outline: 7px solid red; */
         display: flex;
         flex-direction: column;
         /* justify-content: space-between; */
@@ -64,14 +68,3 @@ overflow: hidden;
     object-fit: cover;
  }
 }
-
-/* @media (width >= 1100px) {
-.preview-content-div {
-        width: 60%;
-    }
-    .preview img {
-    height: 100%;
-    }
-
-
-} */

@@ -1,15 +1,12 @@
-import React , {useContext} from 'react'
+import React from 'react'
 import '../src/'
 import backIMG from "../src/assets/shared/icon-back-button.svg"
 import nextIMG from './assets/shared/icon-next-button.svg'
-import {Link } from 'react-router-dom'
-import { DataContext } from './DataContext'
 import { useNavigate } from "react-router-dom";
 
 export default function Player({item,indexVal}) {
 
 const navigate = useNavigate();
-const {scrollToTop } = useContext(DataContext)
 const itemArray = 15;
 
 
@@ -30,19 +27,19 @@ const itemArray = 15;
             </div>
             <div className="playerIcons" >
                <button 
-               onClick={()=>navigate(`/${indexVal == 0 ? indexVal : indexVal-1}`)}
-               disabled={indexVal == 0 ? true : false}
+               onClick={()=>navigate(`/${indexVal === 0 ? indexVal : indexVal-1}`)}
+               disabled={indexVal === 0 ? true : false}
                >
                 <img
                 alt='back'
                 src={backIMG}
                 width={25}
-                style={{opacity:`${indexVal == 0 ? '0.4' : '1'}`}}
+                style={{opacity:`${indexVal === 0 ? '0.4' : '1'}`}}
                 />
                 </button>
                 <button  
-                onClick={()=>navigate(`/${indexVal == itemArray ? indexVal : indexVal+1}`)}
-                disabled={indexVal == itemArray-1 ? true : false}
+                onClick={()=>navigate(`/${indexVal === itemArray ? indexVal : indexVal+1}`)}
+                disabled={indexVal === itemArray-1 ? true : false}
                 >
                 <img
                 alt='next'

@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useContext } from 'react'
+import React, { useEffect, useContext } from 'react'
 import { useLoaderData, useParams } from 'react-router'
 import {motion} from 'framer-motion'
 import { DataContext } from './DataContext'
@@ -21,7 +21,7 @@ export const loaderFunctionPiece = async ({params})=>{
 
 export default function PieceDetails() {
 const navigate = useNavigate();
-  const { popupToggle, setPopupToggle, indexVal, setIndexVal, scrollToTop, startTimer, setStartTimer, slideshowText, setSlideshowText } = useContext(DataContext)
+  const { popupToggle, setPopupToggle, indexVal, setIndexVal, scrollToTop, startTimer, setStartTimer, setSlideshowText } = useContext(DataContext)
 const {id} = useParams();
 // console.log({id} ,'useParams')
 const item = useLoaderData();
@@ -35,7 +35,7 @@ const item = useLoaderData();
         navigate(`/${indexVal}`)
         console.log(indexVal)
       }, 5000);
-      if (indexVal == 15) {
+      if (indexVal === 15) {
       console.log('slideshow stopped')
       setSlideshowText(slideshowText => 'start slideshow')
       clearInterval(intervalID)

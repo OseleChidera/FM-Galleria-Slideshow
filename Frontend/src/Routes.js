@@ -1,8 +1,6 @@
 import App from './App'
 import { createBrowserRouter , createRoutesFromElements, Route , RouterProvider } from 'react-router-dom';
-//components
-import Notfound from './components/Notfound';
-//pages
+
 import Piece from './Piece';
 import BaseLayout from './BaseLayout';
 import {loaderFunction} from './Api'

@@ -4,7 +4,7 @@ import { DataContext } from './DataContext'
 
 
 export default function Clicktoview() {
-  const {popupToggle, setPopupToggle} = useContext(DataContext)
+  const {setPopupToggle} = useContext(DataContext)
   return (
     <div className="view-image" onClick={()=>setPopupToggle(true)}>
         <img

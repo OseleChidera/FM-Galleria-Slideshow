@@ -1,10 +1,9 @@
-import React, { useContext , useState ,useEffect} from 'react'
+import React, {useContext} from 'react'
 import Logo from '../assets/shared/logo.svg'
 import { NavLink } from 'react-router-dom';
 import { DataContext } from '../DataContext';
 
 export default function Nav() {
-// const [slideshowText , setSlideshowText] = useState('start slideshow');
   const { setStartTimer, startTimer, slideshowText, setSlideshowText } = useContext(DataContext)
 
 function startSlideshow(){  
