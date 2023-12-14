@@ -1,0 +1,158 @@
+@media (width > 767px) {
+   
+    .logo{
+        width: 12rem;
+        
+    }
+    nav {
+            padding: 2rem;
+            border-bottom: 0.5px solid grey;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border: 0.5px solid grey;
+            position: sticky;
+            top: 0;
+            z-index: 1;
+            margin-bottom: 1rem;
+            background-color: white;
+        }
+    
+        .slideshow-starter {
+            font-size:2rem;
+            font-weight: 500;
+        }
+    .dimensionl{
+        width: 100vw;
+    }
+       
+        .gallery-image {
+            width: 100%;
+        }
+    
+        .artist-info {
+            
+            position: absolute;
+            bottom: 1rem;
+            margin-left: 1.5rem;
+        }
+    
+        .artist-info .piece-name {
+            font-size: 2.2rem;
+            margin-bottom: 0.5rem;
+        }
+    
+        .artist-info .artist {
+            font-size: 1.2rem;
+        }
+                .piece {
+                    width: auto;
+                    height: 100%;
+                    /* border: 2px solid green; */
+                }
+        .piece-container {
+            flex-direction: row;
+            /* border: 4px solid red; */
+        }
+    
+        .background-image {
+            width: 72%;
+                height: 40rem;
+        }
+    
+        .view-image {
+            padding: 10px;
+            display: inline-flex;
+            align-items: center;
+        }
+    
+        .piece-main-image {
+            object-fit: cover;
+            width: 1.8rem;
+        }
+    
+        .view-image-span {
+            font-size: 1.5rem;
+            margin-left: 10px;
+            margin-block: auto;
+        }
+    
+        .main-image {
+            width: 100%;
+            height: 40rem;
+        }
+    
+        .piece-artist-info {
+            right: 0;
+            top: 0;
+            bottom: 0;
+        }
+    
+        .piece-artist-info .text {
+            width: 20rem;
+            padding: 0 5rem 5rem 3rem;
+        }
+    
+        .piece-artist-info .piece-name {
+            font-size:2.7rem;
+            margin-bottom: 1rem;
+        }
+    
+        .piece-artist-info .artist {
+            font-size: 1.7rem;
+        }
+    
+        .piece-artist-info .thumbnail {
+            width: fit-content;
+           left: 65%;
+        }
+    
+        .piece-artist-info .thumbnail img {
+            width: 8rem;
+            height: 8rem;
+        }
+    
+        .description-container {
+            width: 70%;
+            /* border: 1px solid black; */
+        }
+    
+        .year {
+            font-size: 300px;
+            font-weight: 600;
+            right: 20%;
+        }
+    
+        .top {
+            position: relative;
+            top: -10rem;
+        }
+    
+        .description {
+            font-size: 32px;
+            line-height: 40px;
+            font-weight: 500;
+            width: 100%;
+            margin-bottom: 4rem;
+            /* border: 2px solid red; */
+        }
+    
+        .go-to-source {
+            text-transform: uppercase;
+            font-size: 1.5rem;
+        }
+
+        .player .piece-name {
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+            font-weight: 700;
+            display: block;
+    
+        }
+    
+        .player .artist {
+            font-size:1.5rem;
+            color: #7d7d7d;
+        }
+    
+}
