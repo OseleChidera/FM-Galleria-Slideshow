@@ -8,7 +8,7 @@
     "client": "set PORT=5000 && cd ../Frontend && npm start ",
     "server": "nodemon server.js",
     "dev": "concurrently \"npm run client \" \"npm run server\"",
-    "build": "npm install && cd ../Frontend && npm install && npm run build && npm run server "
+    "build": "concurrently \"npm install \" \"cd ../Frontend && npm install\" && npm run dev"
   },
   "keywords": [],
   "author": "",
