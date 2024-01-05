@@ -12,7 +12,7 @@ import ArtistInfo from './ArtistInfo'
 
 
 export const loaderFunctionPiece = async ({params})=>{
-  const fetchUrl = `http://localhost:4000/data/${params.id}`
+  const fetchUrl = `/data/${params.id}`
   const res = await fetch(fetchUrl ,  {method: "GET", headers: {"Content-type": "application/json;charset=UTF-8"}})
    const data  = await res.json()
    return data;

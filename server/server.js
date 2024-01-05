@@ -1,7 +1,5 @@
 const express = require('express');
 const app = express();
-const cors = require('cors');
-app.use(cors());
 const port = 4000
 const fs = require('fs');
 const path = require('path');
@@ -13,7 +11,6 @@ app.get("/", function (req, res) {
 })
 
 app.get('/data', (req, res) => {
-    res.header('Access-Control-Allow-Origin', '*');
     fs.readFile('./data.json', 'utf8', (err, data) => {
         if (err) {
             console.error(err);
