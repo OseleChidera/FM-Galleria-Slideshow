@@ -4,42 +4,42 @@ const cors = require('cors');
 app.use(cors());
 const port = 4000
 const fs = require('fs');
-
 const path = require('path');
+
+app.use(express.static(path.join(__dirname, '/public')));
 
 app.get('/data', (req, res) => {
     res.header('Access-Control-Allow-Origin', '*');
-    const filePath = path.join(process.cwd(), 'data.json');
-
-    fs.readFile(filePath, 'utf8', (err, data) => {
+    fs.readFile('./data.json', 'utf8', (err, data) => {
         if (err) {
             console.error(err);
-            return res.status(500).send('Error reading JSON file');
+            return;
         }
         try {
             const jsonData = JSON.parse(data);
             res.json(jsonData);
         } catch (error) {
             console.error('Error parsing JSON:', error);
-            res.status(500).send('Error parsing JSON data');
         }
     });
 });
 
+
 app.get('/data/:id', (req, res) => {
     const id = req.params.id;
-    const filePath = path.join(process.cwd(), 'data.json');
 
-    fs.readFile(filePath, 'utf8', (err, data) => {
+    fs.readFile('./data.json', 'utf8', (err, data) => {
         if (err) {
             console.error('Error reading JSON file:', err);
-            return res.status(500).send('Error reading JSON file');
+            res.status(500).send('Error reading JSON file');
+            return;
         }
         try {
             const jsonData = JSON.parse(data);
             const item = jsonData.find(obj => obj.id === Number(id));
             if (!item) {
-                return res.status(404).send('Item not found');
+                res.status(404).send('Item not found');
+                return;
             }
             res.json(item);
         } catch (err) {
