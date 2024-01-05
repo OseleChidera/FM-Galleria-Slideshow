@@ -3,8 +3,9 @@ const app = express();
 const port = 4000 || 5000
 const fs = require('fs');
 const path = require('path');
-
-app.use(express.static(path.join(__dirname, '/public')));
+const cors = require('cors');
+app.use(cors());
+app.use('/', express.static(path.join(__dirname, '/public')));
 
 
 app.get('/data', (req, res) => {
