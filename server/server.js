@@ -1,6 +1,6 @@
 const express = require('express');
 const app = express();
-const port = 4000
+const port = 4000 || 5000
 const fs = require('fs');
 const path = require('path');
 
@@ -56,8 +56,3 @@ app.get('/data/:id', (req, res) => {
 app.listen(port, () => {
     console.log(`You are running on port ${port}`);
 })
-
-
-
-// "build": "react-scripts build",
-    // "build": "npm installbuild && npm dev"
