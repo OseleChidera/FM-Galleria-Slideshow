@@ -6,6 +6,8 @@ const port = 4000
 const fs = require('fs');
 const path = require('path');
 
+app.use(express.static(path.join(__dirname, '/public')));
+
 app.get("/", function (req, res) {
     res.sendFile(path.join(__dirname,'public','index.html' ))
 })
@@ -26,7 +28,7 @@ app.get('/data', (req, res) => {
     });
 });
 
-app.use(express.static(path.join(__dirname, '/public')));
+
 
 app.get('/data/:id', (req, res) => {
     const id = req.params.id;
